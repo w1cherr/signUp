@@ -6,5 +6,5 @@ import (
 )
 
 func init() {
-	beego.Include(&controllers.CommonController{}, &controllers.WebController{})
+	beego.Include(&controllers.Common{}, &controllers.WebController{}, &controllers.UserController{})
 }

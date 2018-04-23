@@ -5,7 +5,7 @@ import (
 )
 
 type WebController struct {
-	CommonController
+	Common
 }
 
 // @router /* [*]
