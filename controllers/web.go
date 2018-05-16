@@ -12,3 +12,8 @@ type WebController struct {
 func (this *WebController) Index() {
 	this.TplName = "mobile/index.html"
 }
+
+// @router /admin/* [*]
+func (this *WebController) Admin() {
+	this.TplName = "admin/index.html"
+}

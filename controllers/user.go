@@ -81,5 +81,5 @@ func (this *UserController) UserLogin()  {
 // @router /api/user/logout [*]
 func (this *UserController) UserLogout() {
 	this.DelSession("user")
-	//this.ReturnSuccess()
+	this.ReturnSuccess()
 }

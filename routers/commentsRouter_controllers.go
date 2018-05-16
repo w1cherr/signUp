@@ -39,4 +39,20 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
+	beego.GlobalControllerRouter["signUp/controllers:WebController"] = append(beego.GlobalControllerRouter["signUp/controllers:WebController"],
+		beego.ControllerComments{
+			Method: "Admin",
+			Router: `/admin/*`,
+			AllowHTTPMethods: []string{"*"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["signUp/controllers:WebController"] = append(beego.GlobalControllerRouter["signUp/controllers:WebController"],
+		beego.ControllerComments{
+			Method: "Upload",
+			Router: `/api/admin/file/upload`,
+			AllowHTTPMethods: []string{"*"},
+			MethodParams: param.Make(),
+			Params: nil})
+
 }
