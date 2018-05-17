@@ -4,6 +4,7 @@ import (
 	"github.com/astaxie/beego/orm"
 	"fmt"
 	"signUp/service"
+	"github.com/astaxie/beego"
 )
 
 func init()  {
@@ -12,6 +13,7 @@ func init()  {
 	orm.RegisterModel(
 		new(User),
 		new(Admin),
+		new(Activity),
 		)
 	orm.RunSyncdb("default", false, true)
 }
@@ -33,4 +35,22 @@ func AddAdmin() {
 		return
 	}
 	fmt.Println("创建超级管理员账号成功！")
+}
+
+func CountObjects(qs orm.QuerySeter) (int64, error) {
+	cnt, err := qs.Count()
+	if err != nil {
+		beego.Error("models.CountObjects ", err)
+		return 0, err
+	}
+	return cnt, err
+}
+
+func ListObjects(qs orm.QuerySeter, objs interface{}) (int64, error) {
+	nums, err := qs.RelatedSel().All(objs)
+	if err != nil {
+		beego.Error("models.ListObjects ", err)
+		return 0, err
+	}
+	return nums, err
 }

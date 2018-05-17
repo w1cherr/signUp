@@ -12,5 +12,6 @@ func init() {
 		&controllers.WebController{},
 		&controllers.UserController{},
 		&admin.AdminController{},
+		&admin.ActivityController{},
 		)
 }
