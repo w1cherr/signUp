@@ -6,11 +6,20 @@ import (
 	"time"
 )
 
+/**
+	活动表
+	ImgUrl 逗号拼接图片url成字符串
+	UserCount 已报名人数
+	UserLimit 限制报名人数
+ */
+
 type Activity struct {
 	Id 				int64
 	Title			string
 	Introduction	string
 	ImgUrl			string
+	UserCount		int64
+	UserLimit 		int64
 	StartTime 		string
 	EndTime 		string
 	CreatedTime		time.Time	`orm:"type(datetime);auto_now_add"`

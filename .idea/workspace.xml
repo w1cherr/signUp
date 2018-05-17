@@ -2,19 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74439fc7-4648-4867-a951-1a74fed2e79b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/admin/activity.go" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controllers/admin/admin.go" afterPath="$PROJECT_DIR$/controllers/admin/admin.go" />
-      <change beforePath="$PROJECT_DIR$/controllers/admin/login.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lastupdate.tmp" afterPath="$PROJECT_DIR$/lastupdate.tmp" />
       <change beforePath="$PROJECT_DIR$/models/activity_table.go" afterPath="$PROJECT_DIR$/models/activity_table.go" />
-      <change beforePath="$PROJECT_DIR$/models/base.go" afterPath="$PROJECT_DIR$/models/base.go" />
-      <change beforePath="$PROJECT_DIR$/models/user_table.go" afterPath="$PROJECT_DIR$/models/user_table.go" />
-      <change beforePath="$PROJECT_DIR$/routers/commentsRouter_controllers_admin.go" afterPath="$PROJECT_DIR$/routers/commentsRouter_controllers_admin.go" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" afterPath="$PROJECT_DIR$/routers/router.go" />
       <change beforePath="$PROJECT_DIR$/signUp" afterPath="$PROJECT_DIR$/signUp" />
+      <change beforePath="$PROJECT_DIR$/static/css/app.40ef4478565e661e16863ec5bd3a16cc.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/css/app.40ef4478565e661e16863ec5bd3a16cc.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/css/app.5689047fc39cc818d5ad70e6bd3dfca5.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/css/app.5689047fc39cc818d5ad70e6bd3dfca5.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/css/app.b4aa1328a7586673e8f9b4d60f6feaf4.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/css/app.b4aa1328a7586673e8f9b4d60f6feaf4.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/css/app.e2105e34446d355b9b332d111b0548b8.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/css/app.e2105e34446d355b9b332d111b0548b8.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/js/app.27c968e078ebdb517d6f.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/js/app.27c968e078ebdb517d6f.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/js/app.997613b3029e6e3eb6c8.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/js/app.997613b3029e6e3eb6c8.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/js/app.c27540371c31a022447b.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/js/app.c27540371c31a022447b.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/js/app.ccf123d9c7c5e627aa2e.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/js/app.ccf123d9c7c5e627aa2e.js.map" afterPath="" />
       <change beforePath="$PROJECT_DIR$/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterPath="$PROJECT_DIR$/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" />
       <change beforePath="$PROJECT_DIR$/views/admin/index.html" afterPath="$PROJECT_DIR$/views/admin/index.html" />
+      <change beforePath="$PROJECT_DIR$/views/mobile/index.html" afterPath="$PROJECT_DIR$/views/mobile/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_table.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activity_table.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/activity_table.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="396">
+              <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="16" />
               <folding>
                 <element signature="e#16#102#0" expanded="true" />
               </folding>
@@ -79,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_table.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user_table.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/user_table.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="352">
+              <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="8" />
               <folding>
                 <element signature="e#16#109#0" expanded="true" />
               </folding>
@@ -160,11 +169,11 @@
         <option value="$PROJECT_DIR$/service/permission.go" />
         <option value="$PROJECT_DIR$/controllers/admin/admin.go" />
         <option value="$PROJECT_DIR$/routers/router.go" />
-        <option value="$PROJECT_DIR$/models/activity_table.go" />
         <option value="$PROJECT_DIR$/controllers/common.go" />
         <option value="$PROJECT_DIR$/models/base.go" />
         <option value="$PROJECT_DIR$/controllers/admin/activity.go" />
         <option value="$PROJECT_DIR$/models/user_table.go" />
+        <option value="$PROJECT_DIR$/models/activity_table.go" />
       </list>
     </option>
   </component>
@@ -228,6 +237,16 @@
               <item name="signUp" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="signUp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="signUp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="signUp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="signUp" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -268,7 +287,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1559" height="1360" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22940013" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -278,7 +296,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23873518" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23873518" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -699,14 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/admin_table.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/base.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
@@ -715,22 +725,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user_table.go">
+    <entry file="file://$PROJECT_DIR$/models/admin_table.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#109#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="352">
+          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/activity_table.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="396">
+          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="16" />
           <folding>
             <element signature="e#16#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user_table.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="8" />
+          <folding>
+            <element signature="e#16#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
