@@ -17,24 +17,30 @@ func (this *ActivityController) SaveActivity ()  {
 		this.ReturnJson(10403,"请先登录")
 		return
 	}
-	id := this.GetString("id")
+	id, _ := this.GetInt64("id")
 	title := this.GetString("title")
 	introduction := this.GetString("introduction")
+	userLimit,_ := this.GetInt64("userLimit")
+	status,_ := this.GetInt("status")
 	startTime := this.GetString("startTime")
 	endTime := this.GetString("endTime")
 	imgUrl := this.GetString("imgUrl")
+	cover := this.GetString("cover")
 
-	if len(title)==0 || len(introduction) == 0 {
+	if len(title)==0 || len(introduction) == 0{
 		this.ReturnJson(10003, "need all params")
 		return
 	}
 	var activity models.Activity
 	activity.Title = title
 	activity.Introduction = introduction
+	activity.UserLimit = userLimit
+	activity.Status = status
 	activity.StartTime = startTime
 	activity.EndTime = endTime
 	activity.ImgUrl = imgUrl
-	if id == "" {
+	activity.Cover = cover
+	if id == 0 {
 		err := activity.Insert()
 		if (err != nil) {
 			beego.Error(err)
@@ -43,7 +49,10 @@ func (this *ActivityController) SaveActivity ()  {
 		}
 		this.ReturnSuccess()
 	} else {
-		activity.Title = id
+		t := models.Activity{Id:id}
+		t.Read()
+		activity.Id = id
+		activity.CreatedTime = t.CreatedTime
 		err := activity.Update()
 		if (err != nil) {
 			beego.Error(err)
@@ -56,6 +65,11 @@ func (this *ActivityController) SaveActivity ()  {
 
 //@router /api/admin/activity/list [*]
 func (this *ActivityController) ListActivity() {
+	admin := this.GetSession("admin")
+	if admin == nil{
+		this.ReturnJson(10403,"请先登录")
+		return
+	}
 	per, _ := this.GetInt("per")
 	page, _ := this.GetInt("page")
 	if (per < 1) {
@@ -80,4 +94,19 @@ func (this *ActivityController) ListActivity() {
 	var activity []models.Activity
 	models.ListObjects(qs, &activity)
 	this.ReturnSuccess("data",activity,"page",page,"hasNext",hasNext,"cnt",cnt,"per",per,"total", total)
+}
+
+//@router /api/admin/activity/delete [*]
+func (this *ActivityController) DelateActivity() {
+	id ,_:= this.GetInt64("id")
+	activity := models.Activity{Id:id}
+	if err:=activity.Read();err!=nil{
+		this.ReturnJson(10001,"not found this activity")
+		return
+	}
+	if _,err := activity.Delete(); err != nil {
+		this.ReturnJson(10002,"delete error")
+		return
+	}
+	this.ReturnSuccess()
 }

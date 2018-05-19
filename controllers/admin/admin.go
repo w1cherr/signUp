@@ -4,7 +4,6 @@ import (
 	"signUp/controllers"
 	"signUp/models"
 	"signUp/service"
-	"fmt"
 	"github.com/astaxie/beego/orm"
 )
 
@@ -16,7 +15,6 @@ type AdminController struct {
 func (this *AdminController) AdminLogin()  {
 	name := this.GetString("Username")
 	password := this.GetString("Password")
-	fmt.Println(name)
 
 	admin := models.Admin{}
 

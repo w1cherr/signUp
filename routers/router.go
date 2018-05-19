@@ -11,7 +11,11 @@ func init() {
 		&controllers.Common{},
 		&controllers.WebController{},
 		&controllers.UserController{},
+		&controllers.SwiperController{},
+		&controllers.ActivityController{},
 		&admin.AdminController{},
 		&admin.ActivityController{},
+		&admin.AdminUserController{},
+		&admin.AdminSwiperController{},
 		)
 }

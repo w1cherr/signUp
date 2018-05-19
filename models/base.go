@@ -14,6 +14,9 @@ func init()  {
 		new(User),
 		new(Admin),
 		new(Activity),
+		new(Swiper),
+		new(Message),
+		new(SignUp),
 		)
 	orm.RunSyncdb("default", false, true)
 }

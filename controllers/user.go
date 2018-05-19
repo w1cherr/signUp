@@ -54,7 +54,6 @@ func (this *UserController) UserInster()  {
 func (this *UserController) UserLogin()  {
 	name := this.GetString("Account")
 	password := this.GetString("Password")
-	fmt.Println(name)
 
 	user := models.User{}
 
@@ -81,5 +80,14 @@ func (this *UserController) UserLogin()  {
 // @router /api/user/logout [*]
 func (this *UserController) UserLogout() {
 	this.DelSession("user")
+	this.ReturnSuccess()
+}
+// @router /api/user/isLogin [*]
+func (this *UserController) UserIsLogin() {
+	user := this.GetSession("user")
+	if user == nil{
+		this.ReturnJson(10403,"请先登录")
+		return
+	}
 	this.ReturnSuccess()
 }
