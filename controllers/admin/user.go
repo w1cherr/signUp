@@ -11,7 +11,7 @@ type AdminUserController struct {
 	controllers.Common
 }
 
-//@router /api/admin/user/list [*]
+// @router /api/admin/user/list [*]
 func (this *AdminUserController) ListUser() {
 	admin := this.GetSession("admin")
 	if admin == nil{
@@ -44,7 +44,7 @@ func (this *AdminUserController) ListUser() {
 	this.ReturnSuccess("data",user,"page",page,"hasNext",hasNext,"cnt",cnt,"per",per,"total", total)
 }
 
-//@router /api/admin/user/handle [*]
+// @router /api/admin/user/handle [*]
 func (this *AdminUserController) HandleUser() {
 	id ,_:= this.GetInt64("id")
 	status,_ := this.GetInt("status")
@@ -62,3 +62,4 @@ func (this *AdminUserController) HandleUser() {
 	}
 	this.ReturnSuccess()
 }
+

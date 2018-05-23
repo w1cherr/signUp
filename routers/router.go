@@ -18,4 +18,5 @@ func init() {
 		&admin.AdminUserController{},
 		&admin.AdminSwiperController{},
 		)
+	beego.SetStaticPath("/upload/file", "upload/file")
 }

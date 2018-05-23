@@ -11,7 +11,7 @@ type AdminSwiperController struct {
 	controllers.Common
 }
 
-//@router /api/admin/swiper/save [*]
+// @router /api/admin/swiper/save [*]
 func (this *AdminSwiperController) SaveActivity ()  {
 	admin := this.GetSession("admin")
 	if admin == nil{
@@ -38,6 +38,7 @@ func (this *AdminSwiperController) SaveActivity ()  {
 		this.ReturnSuccess()
 	} else {
 		t := models.Swiper{Id:id}
+		t.Read()
 		swiper.Id = id
 		swiper.CreatedTime = t.CreatedTime
 		err := swiper.Update()
@@ -50,7 +51,7 @@ func (this *AdminSwiperController) SaveActivity ()  {
 	}
 }
 
-//@router /api/admin/swiper/list [*]
+// @router /api/admin/swiper/list [*]
 func (this *AdminSwiperController) ListSwiper() {
 	admin := this.GetSession("admin")
 	if admin == nil{
@@ -83,7 +84,7 @@ func (this *AdminSwiperController) ListSwiper() {
 	this.ReturnSuccess("data",swiper,"page",page,"hasNext",hasNext,"cnt",cnt,"per",per,"total", total)
 }
 
-//@router /api/admin/swiper/delete [*]
+// @router /api/admin/swiper/delete [*]
 func (this *AdminSwiperController) DelateSwiper() {
 	id ,_:= this.GetInt64("id")
 	swiper := models.Swiper{Id:id}

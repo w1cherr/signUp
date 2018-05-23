@@ -9,7 +9,7 @@ type ActivityController struct {
 	Common
 }
 
-//@router /api/activity/list [*]
+// @router /api/activity/list [*]
 func (this *ActivityController) ListActivity() {
 	per, _ := this.GetInt("per")
 	page, _ := this.GetInt("page")
@@ -37,7 +37,7 @@ func (this *ActivityController) ListActivity() {
 	this.ReturnSuccess("data",activity,"page",page,"hasNext",hasNext,"cnt",cnt,"per",per,"total", total)
 }
 
-//@router /api/activity/detail [*]
+// @router /api/activity/detail [*]
 func (this *ActivityController) DetailActivity()  {
 	id ,_ := this.GetInt64("id")
 	activity := models.Activity{}

@@ -25,8 +25,24 @@ func init() {
 
 	beego.GlobalControllerRouter["signUp/controllers/admin:ActivityController"] = append(beego.GlobalControllerRouter["signUp/controllers/admin:ActivityController"],
 		beego.ControllerComments{
+			Method: "Pass",
+			Router: `/api/admin/activity/pass`,
+			AllowHTTPMethods: []string{"*"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["signUp/controllers/admin:ActivityController"] = append(beego.GlobalControllerRouter["signUp/controllers/admin:ActivityController"],
+		beego.ControllerComments{
 			Method: "SaveActivity",
 			Router: `/api/admin/activity/save`,
+			AllowHTTPMethods: []string{"*"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["signUp/controllers/admin:ActivityController"] = append(beego.GlobalControllerRouter["signUp/controllers/admin:ActivityController"],
+		beego.ControllerComments{
+			Method: "ListUser",
+			Router: `/api/admin/activity/userlist`,
 			AllowHTTPMethods: []string{"*"},
 			MethodParams: param.Make(),
 			Params: nil})

@@ -9,7 +9,7 @@ type SwiperController struct {
 	Common
 }
 
-//@router /api/swiper/list [*]
+// @router /api/swiper/list [*]
 func (this *SwiperController) ListSwiper() {
 	per, _ := this.GetInt("per")
 	page, _ := this.GetInt("page")

@@ -17,7 +17,7 @@ import (
 type Activity struct {
 	Id 				int64
 	Title			string
-	Introduction	string
+	Introduction	string		`orm:"type(longtext)"`
 	Cover			string
 	ImgUrl			string
 	UserCount		int64

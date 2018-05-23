@@ -19,6 +19,7 @@ type User struct {
 	CanSignUp 	int			`orm:"default(1)"`
 	CreatedTime	time.Time	`orm:"type(datetime);auto_now_add"`
 	UpdatedTime	time.Time	`orm:"type(datetime);auto_now"`
+	Message  	[]*Message 	`orm:"rel(m2m)"`
 }
 
 func (this *User) InsertUser() error {

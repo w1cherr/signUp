@@ -33,6 +33,14 @@ func init() {
 
 	beego.GlobalControllerRouter["signUp/controllers:UserController"] = append(beego.GlobalControllerRouter["signUp/controllers:UserController"],
 		beego.ControllerComments{
+			Method: "ListUserActivity",
+			Router: `/api/user/activity/list`,
+			AllowHTTPMethods: []string{"*"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["signUp/controllers:UserController"] = append(beego.GlobalControllerRouter["signUp/controllers:UserController"],
+		beego.ControllerComments{
 			Method: "UserInster",
 			Router: `/api/user/created`,
 			AllowHTTPMethods: []string{"*"},
@@ -59,6 +67,22 @@ func init() {
 		beego.ControllerComments{
 			Method: "UserLogout",
 			Router: `/api/user/logout`,
+			AllowHTTPMethods: []string{"*"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["signUp/controllers:UserController"] = append(beego.GlobalControllerRouter["signUp/controllers:UserController"],
+		beego.ControllerComments{
+			Method: "ListMessage",
+			Router: `/api/user/message/list`,
+			AllowHTTPMethods: []string{"*"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["signUp/controllers:UserController"] = append(beego.GlobalControllerRouter["signUp/controllers:UserController"],
+		beego.ControllerComments{
+			Method: "Signup",
+			Router: `/api/user/signup`,
 			AllowHTTPMethods: []string{"*"},
 			MethodParams: param.Make(),
 			Params: nil})
