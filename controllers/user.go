@@ -115,7 +115,8 @@ func (this *UserController) Signup() {
 	}
 
 	user := userinfo.(models.User)
-
+	fmt.Println("用户：")
+	fmt.Println(user)
 	if user.CanSignUp != 1 {
 		this.ReturnJson(10001, "用户不可报名")
 		return
@@ -163,7 +164,7 @@ func (this *UserController) Signup() {
 		return
 	}
 
-	qs := orm.NewOrm().QueryTable("sign_up").Filter("activity_id", id).Filter("status__in", 0, 1)
+	qs := orm.NewOrm().QueryTable("sign_up").Filter("activity_id", id).Filter("status__in", 1)
 	userCount, _ := models.CountObjects(qs)
 	fmt.Println(activity.UserCount)
 	fmt.Println(userCount)
@@ -182,12 +183,12 @@ func (this *UserController) Signup() {
 		this.ReturnJson(10006, "报名失败")
 		return
 	}
-	activity.UserCount += 1
-	if _, err := o.Update(&activity); err != nil {
-		o.Rollback()
-		this.ReturnJson(10006, "报名失败")
-		return
-	}
+	//activity.UserCount += 1
+	//if _, err := o.Update(&activity); err != nil {
+	//	o.Rollback()
+	//	this.ReturnJson(10006, "报名失败")
+	//	return
+	//}
 	if err := o.Commit(); err != nil {
 		this.ReturnJson(10006, "报名失败")
 		return

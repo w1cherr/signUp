@@ -51,7 +51,7 @@ func (this *ActivityController) SaveActivity() {
 		this.ReturnSuccess()
 	} else {
 		t := models.Activity{Id: id}
-		t.Read()
+			t.Read()
 		activity.Id = id
 		activity.CreatedTime = t.CreatedTime
 		err := activity.Update()
@@ -135,6 +135,11 @@ func (this *ActivityController) Pass() {
 	}
 	signUp.Status = 1
 	if err := signUp.Update(); err != nil {
+		this.ReturnJson(10002, "pass error")
+		return
+	}
+	activity.UserCount += 1
+	if err := activity.Update(); err != nil {
 		this.ReturnJson(10002, "pass error")
 		return
 	}
